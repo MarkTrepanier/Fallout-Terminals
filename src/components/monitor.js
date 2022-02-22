@@ -1,8 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
-import ActionRoller from "./ActionRoller";
-import Terminal from "./Terminal";
-import Login from "./login";
+//import ActionRoller from "./ActionRoller";
+//import Terminal from "./Terminal";
+//import Login from "./login";
 import TerminalsList from "./TerminalsList"
 
 export default function Monitor(props) {
