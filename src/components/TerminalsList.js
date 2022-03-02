@@ -13,6 +13,9 @@ const TerminalNameStyle = Styled.div`
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* IE10+/Edge */
    user-select: none; /* Standard */
+
+   margin-top: 5%;
+   font-size:2rem;
 `
 
 //todo: make text unselectable
