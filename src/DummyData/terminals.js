@@ -1,6 +1,6 @@
 let terminals = [
     {
-        terminal_name: "2222022211: RobCo: VisRep0"
+        terminal_name: "2222022211:RobCo:VisRep0"
     },
     {
         terminal_name: "2222022213:RobCo:VisRep1"
