@@ -20,7 +20,7 @@ const TerminalNameStyle = Styled.div`
    margin-top: 5%;
    font-size:2rem;
    @media(max-width:800px){
-      font-size: 1.5rem;
+      font-size: 1rem;
    }
 `
 
