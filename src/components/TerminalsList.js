@@ -19,6 +19,9 @@ const TerminalNameStyle = Styled.div`
    width: 0px;
    margin-top: 5%;
    font-size:2rem;
+   @media(max-width:700px){
+      font-size: 1.5rem;
+   }
 `
 
 //todo: make text unselectable
