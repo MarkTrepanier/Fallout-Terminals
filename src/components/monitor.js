@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
 //import ActionRoller from "./ActionRoller";
 //import Terminal from "./Terminal";
 //import Login from "./login";
@@ -12,7 +13,9 @@ export default function Monitor(props) {
       {/* <Terminal />
       <Login />
       <ActionRoller /> */}
-      <TerminalsList />
+      <Router path="/">
+          <TerminalsList />
+      </Router>
       </div>
 
       <footer></footer>
