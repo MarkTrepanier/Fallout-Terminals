@@ -1,10 +1,12 @@
 import terminalsData from "../DummyData/terminals"
 import Styled from  "styled-components"
+import {useNavigate} from 'react-router-dom'
 
 let data = terminalsData()
 export default function TerminalsList(props) {
+   let nav = useNavigate()
    return <div>
-      {data.map((terminal) => <TerminalNameStyle key={terminal.terminal_name} onClick={() => console.log(terminal.terminal_name)}>[{terminal.terminal_name}]</TerminalNameStyle>)}
+      {data.map((terminal) => <TerminalNameStyle key={terminal.terminal_name} onClick={() => nav(`/terminal/${terminal.terminal_name}`)}>[{terminal.terminal_name}]</TerminalNameStyle>)}
    </div>
 };
 
