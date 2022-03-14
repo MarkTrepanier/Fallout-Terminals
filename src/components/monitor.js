@@ -51,13 +51,18 @@ const MonitorStyle = Styled.div`
   .content{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     border-top: solid 2px;
     border-radius: 5px;
     width: 100%;
     height: 100vh;
     margin: 0;
-    div{width: 90%}
+    div{
+      display: flex;
+      flex-direction column;
+      width: fit-content;
+
+    }
   }
       
   &:before {

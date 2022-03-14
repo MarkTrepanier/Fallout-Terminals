@@ -11,11 +11,12 @@ export default function TerminalsList(props) {
 };
 
 const TerminalNameStyle = Styled.div`
+   display: inline-block;
    -webkit-user-select: none; /* Safari */        
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* IE10+/Edge */
    user-select: none; /* Standard */
-
+   width: 0px;
    margin-top: 5%;
    font-size:2rem;
 `
