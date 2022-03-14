@@ -62,7 +62,7 @@ const MonitorStyle = Styled.div`
       flex-direction column;
       width: fit-content;
     }
-    @media (max-width: 700px){
+    @media (max-width: 800px){
       div{
         width: 90%;
         align-self:center;
