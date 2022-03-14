@@ -17,6 +17,7 @@ export default function Monitor(props) {
           <Routes>
             <Route exact path="/" element={<TerminalsList/>}/>
             <Route path="home" element={<TerminalsList />}/>
+            <Route path="*" element={<>404: PAGE NOT FOUND</>}></Route>`
           </Routes>
         </Router>
       </div>
