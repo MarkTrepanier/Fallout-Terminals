@@ -1,9 +1,25 @@
+import terminalsData from "../DummyData/terminals"
+import Styled from  "styled-components"
+import {useNavigate} from 'react-router-dom'
+
+let data = terminalsData()
 export default function TerminalsList(props) {
+   let nav = useNavigate()
    return <div>
-      <div>[2222022211:RobCo:VisRep0]</div>
-      <div>[2222022213:RobCo:VisRep1]</div>
-      <div>[2222022214:RobCo:VisRep2]</div>
-      <div>[2222022215:RobCo:VisRep3]</div>
-      <div>[2222022216:RobCo:VisRep4]</div>
+      {data.map((terminal) => <TerminalNameStyle key={terminal.terminal_name} onClick={() => {nav(`/terminal/${terminal.terminal_name}`)}}>[{terminal.terminal_name}]</TerminalNameStyle>)}
    </div>
 };
+
+const TerminalNameStyle = Styled.div`
+   -webkit-user-select: none; /* Safari */        
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* IE10+/Edge */
+   user-select: none; /* Standard */
+
+   margin-top: 5%;
+   font-size:2rem;
+`
+
+//todo: make text unselectable
+//todo: make clickable, returning page data?
+//todo: switch from dummy data to backend support

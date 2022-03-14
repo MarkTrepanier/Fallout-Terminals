@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import ActionRoller from "./ActionRoller";
 //import Terminal from "./Terminal";
 //import Login from "./login";
@@ -9,12 +10,17 @@ export default function Monitor(props) {
   return (
     <MonitorStyle className="monitor">
       <div className="content">
-      {/* <Terminal />
-      <Login />
-      <ActionRoller /> */}
-      <TerminalsList />
+        {/* <Terminal />
+        <Login />
+        <ActionRoller /> */}
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<TerminalsList/>}/>
+            <Route path="home" element={<TerminalsList />}/>
+            <Route path="*" element={<>404: PAGE NOT FOUND</>}></Route>`
+          </Routes>
+        </Router>
       </div>
-
       <footer></footer>
     </MonitorStyle>
   );
