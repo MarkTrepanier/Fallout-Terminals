@@ -64,7 +64,6 @@ export default function Terminal(props) {
 const PageStyle = styled.div`
   display: flex;
   flex-direction: column;
-  .page-header {
-    align-self: center;
+  h2{
   }
 `;

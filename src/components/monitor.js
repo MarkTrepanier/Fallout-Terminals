@@ -54,6 +54,9 @@ const MonitorStyle = Styled.div`
     display: flex;
     flex-direction: column;
     align-items: left;
+    h2{
+      align-self:center;
+    }
     border-top: solid 2px;
     border-radius: 5px;
     width: 100%;
@@ -62,7 +65,7 @@ const MonitorStyle = Styled.div`
     div{
       display: flex;
       flex-direction column;
-      width: fit-content;
+      width: 100%;
     }
     @media (max-width: 800px){
       div{
