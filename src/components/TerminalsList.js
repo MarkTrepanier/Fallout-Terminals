@@ -1,4 +1,4 @@
-import terminalsData from "../DummyData/terminals"
+import terminalsData from "../DummyData/dummyTerminals"
 import Styled from  "styled-components"
 import {useNavigate} from 'react-router-dom'
 

@@ -1,6 +1,8 @@
 let terminals = [
     {
+
         terminal_name: "2222022211:RobCo:VisRep0",
+        header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
         page_0: {
             prompt:"hello from the outside!",
             userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
