@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 
 export default function Terminal(props) {
+  const {activeTerminal, setActiveTerminal} = props;
   const initialState = {
     text: "hey",
     page_id: 1,

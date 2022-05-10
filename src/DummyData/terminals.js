@@ -1,6 +1,19 @@
 let terminals = [
     {
-        terminal_name: "2222022211:RobCo:VisRep0"
+        terminal_name: "2222022211:RobCo:VisRep0",
+        page_0: {
+            prompt:"hello from the outside!",
+            userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
+        },
+        page_1: {
+            prompt:"you are cool",
+            userOptions:[{text:"goodbye",route:"0"},{text:"oki. bye",route:"2"}]
+        },
+        page_2: {
+            prompt:"oh. bye!",
+            userOptions:[{text:"-exit-",route:"1"}]
+        },
+
     },
     {
         terminal_name: "2222022213:RobCo:VisRep1"
