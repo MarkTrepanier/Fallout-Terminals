@@ -6,11 +6,10 @@ import dummyTerminals from "../DummyData/dummyTerminals";
 export default function Terminal(props) {
   const {activeTerminal, setActiveTerminal} = props;
   const initialState = {
-    text: "loading",
-    page_id: 1,
+    prompt: "loading",
   };
 
-  // const [page, setPage] = useState(initialState);
+  const [page, setPage] = useState(initialState);
   // useEffect(() => {
   //   axios
   //     .get(
@@ -24,6 +23,7 @@ export default function Terminal(props) {
   //     });
   //   //eslint-disable-next-line
   // }, []);
+  useEffect(()=>setPage(activeTerminal.page_0),[])
 
   // const handleClick = (link) => {
   //   console.log(link);
@@ -36,24 +36,27 @@ export default function Terminal(props) {
   //       console.log();
   //     });
   // };
+  const handleClick = (route) => {
+    setPage(route)
+  }
 
   return (
     <PageStyle className="page">
-      {/* {page.header ? (
-        <h2 className="page-header">{`${page.header}`}</h2>
+      {activeTerminal.header ? (
+        <h2 className="page-header">{`${activeTerminal.header}`}</h2>
       ) : (
         <></>
       )}
-      {page ? <h2 className="page-text">{`${page.text}`}</h2> : <></>}
-      {page.options?.map((option, index) => {
+      {page ? <h2 className="page-text">{`${page.prompt}`}</h2> : <></>}
+      {page.userOptions?.map((option, index) => {
           return (
             <h3
               key={index}
-              onClick={() => handleClick(option.link)}
-            >{`> ${option.option}`}
+              onClick={() => handleClick(option.route)}
+            >{`> ${option.text}`}
             </h3>
           );
-        })} */}
+        })}
     </PageStyle>
   );
 }

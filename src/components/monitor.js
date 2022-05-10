@@ -2,10 +2,9 @@ import React, {useState} from "react";
 import Styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import ActionRoller from "./ActionRoller";
-//import Terminal from "./Terminal";
 //import Login from "./login";
 import TerminalsList from "./TerminalsList";
-// import Terminal from "./Terminal";
+import Terminal from "./Terminal";
 
 export default function Monitor(props) {
   const[activeTerminal, setActiveTerminal]=useState("")
@@ -18,7 +17,7 @@ export default function Monitor(props) {
           <Routes>
             <Route exact path="/" element={<TerminalsList activeTerminal={activeTerminal} setActiveTerminal={setActiveTerminal}/>}/>
             <Route path="home" element={<TerminalsList activeTerminal={activeTerminal} setActiveTerminal={setActiveTerminal}/>}/>
-            {/* <Route path="testterminal/*" element={<Terminal activeTerminal={activeTerminal} setActiveTerminal={setActiveTerminal}/>}/> */}
+            <Route path="testterminal/*" element={<Terminal activeTerminal={activeTerminal} setActiveTerminal={setActiveTerminal}/>}/>
             <Route path="terminal/*" element={<>Terminal: {`${window.location.pathname.substring(10)}`}, NOT READY</>}></Route>
             <Route path="*" element={<>{`${window.location.pathname.substring(1)}`}: 404! NOT A PAGE</>}></Route>
           </Routes>
