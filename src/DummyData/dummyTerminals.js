@@ -9,7 +9,7 @@ let dummyTerminals = {
         },
         page_1: {
             prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"page_0"},{text:"oki. bye",route:"page_2"}]
+            userOptions:[{text:"goodbye",route:"page_0"},{text:"you are hot",route:"page_2"}]
         },
         page_2: {
             prompt:"oh. bye!",
@@ -21,65 +21,33 @@ let dummyTerminals = {
         terminal_name: "2222022213:RobCo:VisRep1",
         header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
         page_0: {
-            prompt:"hello from the outside!",
-            userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
+            prompt:"Are you my favorite?",
+            userOptions:[{text:"yes!",route:"page_1"},{text:"go away!",route:"page_2"}]
         },
         page_1: {
-            prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"0"},{text:"oki. bye",route:"2"}]
+            prompt:"you know you are! YEAH!",
+            userOptions:[{text:"heck yeah! peace!",route:"page_0"},{text:"get out of my face",route:"page_2"}]
         },
         page_2: {
             prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"1"}]
+            userOptions:[{text:"-exit-",route:"page_1"}]
         },
     },
     "2222022214:RobCo:VisRep2":{
         terminal_name: "2222022214:RobCo:VisRep2",
         header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
         page_0: {
-            prompt:"hello from the outside!",
-            userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
+            prompt:"Are you a mutant?",
+            userOptions:[{text:"yes",route:"page_1"},{text:"go away!",route:"page_2"}]
         },
         page_1: {
-            prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"0"},{text:"oki. bye",route:"2"}]
+            prompt:"oof.. well.. great",
+            userOptions:[{text:"goodbye racist!",route:"page_0"},{text:"is that.. that cool?",route:"page_2"}]
         },
         page_2: {
-            prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"1"}]
+            prompt:"um. bye!",
+            userOptions:[{text:"-exit-",route:"page_1"}]
         },
     },
-    "2222022215:RobCo:VisRep3":{
-        terminal_name: "2222022215:RobCo:VisRep3",
-        header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-        page_0: {
-            prompt:"hello from the outside!",
-            userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
-        },
-        page_1: {
-            prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"0"},{text:"oki. bye",route:"2"}]
-        },
-        page_2: {
-            prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"1"}]
-        },
-    },
-    "2222022216:RobCo:VisRep4":{
-        terminal_name: "2222022216:RobCo:VisRep4",
-        header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-        page_0: {
-            prompt:"hello from the outside!",
-            userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
-        },
-        page_1: {
-            prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"0"},{text:"oki. bye",route:"2"}]
-        },
-        page_2: {
-            prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"1"}]
-        },
-    }
 }
 export default dummyTerminals;
