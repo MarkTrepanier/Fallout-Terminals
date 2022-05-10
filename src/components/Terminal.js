@@ -37,7 +37,7 @@ export default function Terminal(props) {
   //     });
   // };
   const handleClick = (route) => {
-    setPage(route)
+    setPage(activeTerminal[route])
   }
 
   return (
@@ -52,7 +52,7 @@ export default function Terminal(props) {
           return (
             <h3
               key={index}
-              onClick={() => handleClick(option.route)}
+              onClick={() => handleClick(`${option.route}`)}
             >{`> ${option.text}`}
             </h3>
           );

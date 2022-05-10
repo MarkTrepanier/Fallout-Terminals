@@ -5,15 +5,15 @@ let dummyTerminals = {
         header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
         page_0: {
             prompt:"hello from the outside!",
-            userOptions:[{text:"Hi!",route:"1"},{text:"go away!",route:"2"}]
+            userOptions:[{text:"Hi!",route:"page_1"},{text:"go away!",route:"page_2"}]
         },
         page_1: {
             prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"0"},{text:"oki. bye",route:"2"}]
+            userOptions:[{text:"goodbye",route:"page_0"},{text:"oki. bye",route:"page_2"}]
         },
         page_2: {
             prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"1"}]
+            userOptions:[{text:"-exit-",route:"page_1"}]
         },
 
     },
