@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import terminalsList from "../DummyData/dummyTerminals";
+import dummyTerminals from "../DummyData/dummyTerminals";
 
 export default function Terminal(props) {
   const {activeTerminal, setActiveTerminal} = props;
@@ -10,36 +10,36 @@ export default function Terminal(props) {
     page_id: 1,
   };
 
-  const [page, setPage] = useState(initialState);
-  useEffect(() => {
-    axios
-      .get(
-        `https://f2d20terminal.herokuapp.com/api/users/1/pages/${page.page_id}`
-      )
-      .then((resp) => {
-        setPage(resp.data);
-      })
-      .catch((err) => {
-        console.log();
-      });
-    //eslint-disable-next-line
-  }, []);
+  // const [page, setPage] = useState(initialState);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://f2d20terminal.herokuapp.com/api/users/1/pages/${page.page_id}`
+  //     )
+  //     .then((resp) => {
+  //       setPage(resp.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log();
+  //     });
+  //   //eslint-disable-next-line
+  // }, []);
 
-  const handleClick = (link) => {
-    console.log(link);
-    axios
-      .get(`https://f2d20terminal.herokuapp.com/api/users/1/pages/${link}`)
-      .then((resp) => {
-        setPage(resp.data);
-      })
-      .catch((err) => {
-        console.log();
-      });
-  };
+  // const handleClick = (link) => {
+  //   console.log(link);
+  //   axios
+  //     .get(`https://f2d20terminal.herokuapp.com/api/users/1/pages/${link}`)
+  //     .then((resp) => {
+  //       setPage(resp.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log();
+  //     });
+  // };
 
   return (
     <PageStyle className="page">
-      {page.header ? (
+      {/* {page.header ? (
         <h2 className="page-header">{`${page.header}`}</h2>
       ) : (
         <></>
@@ -53,7 +53,7 @@ export default function Terminal(props) {
             >{`> ${option.option}`}
             </h3>
           );
-        })}
+        })} */}
     </PageStyle>
   );
 }

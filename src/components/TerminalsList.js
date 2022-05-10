@@ -1,15 +1,17 @@
-import terminalsData from "../DummyData/dummyTerminals"
+import dummyTerminals from "../DummyData/dummyTerminals"
 import Styled from  "styled-components"
 import {useNavigate} from 'react-router-dom'
 
-let data = terminalsData()
+const data = dummyTerminals
 export default function TerminalsList(props) {
+   console.log(data)
+ 
    const {activeTerminal, setActiveTerminal} = props
    let nav = useNavigate()
    return <div>
-      {data.map((terminal) => <TerminalNameStyle key={terminal.terminal_name} onClick={() => {
-         setActiveTerminal(terminal.terminal_name)
-         console.log(terminal.terminal_name)
+      {Object.values(data).map((terminal) => <TerminalNameStyle key={terminal.terminal_name} onClick={() => {
+         setActiveTerminal(terminal)
+         console.log(terminal)
          nav(`/terminal/${terminal.terminal_name}`)}}>[{terminal.terminal_name}]</TerminalNameStyle>)}
    </div>
 };
