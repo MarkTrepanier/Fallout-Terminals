@@ -4,16 +4,16 @@ let dummyTerminals = {
         terminal_name: "2222022211:RobCo:VisRep0",
         header:"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
         page_0: {
-            prompt:"hello from the outside!",
-            userOptions:[{text:"Hi!",route:"page_1"},{text:"go away!",route:"page_2"}]
+            prompt:"Welcome to ROBCO OS ELECTRIC MAIL SERVICE!",
+            userOptions:[{text:"from @JohnSmith: Mike, WTH :@03/14/2074",route:"page_1"},{text:"from @JohnSmith: dead :@03/14/2074",route:"page_2"}]
         },
         page_1: {
-            prompt:"you are cool",
-            userOptions:[{text:"goodbye",route:"page_0"},{text:"you are hot",route:"page_2"}]
+            prompt:"fuck you Mike, You made me look like an idiot today at todays meeting. Why cant you finish your work?",
+            userOptions:[{text:"-back-",route:"page_0"}]
         },
         page_2: {
-            prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"page_1"}]
+            prompt:"Did you really think i wouldn't be able to tell you are sleeping with the head of HR? you are dead buddy!",
+            userOptions:[{text:"-back-",route:"page_0"}]
         },
 
     },
@@ -30,7 +30,7 @@ let dummyTerminals = {
         },
         page_2: {
             prompt:"oh. bye!",
-            userOptions:[{text:"-exit-",route:"page_1"}]
+            userOptions:[{text:"-exit-",route:"page_0"}]
         },
     },
     "2222022214:RobCo:VisRep2":{
@@ -46,7 +46,7 @@ let dummyTerminals = {
         },
         page_2: {
             prompt:"um. bye!",
-            userOptions:[{text:"-exit-",route:"page_1"}]
+            userOptions:[{text:"-exit-",route:"page_0"}]
         },
     },
 }
