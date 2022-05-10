@@ -9,6 +9,7 @@ export default function TerminalsList(props) {
    return <div>
       {data.map((terminal) => <TerminalNameStyle key={terminal.terminal_name} onClick={() => {
          setActiveTerminal(terminal.terminal_name)
+         console.log(terminal.terminal_name)
          nav(`/terminal/${terminal.terminal_name}`)}}>[{terminal.terminal_name}]</TerminalNameStyle>)}
    </div>
 };
