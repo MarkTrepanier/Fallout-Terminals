@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import ActionRoller from "./ActionRoller";
@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TerminalsList from "./TerminalsList"
 
 export default function Monitor(props) {
+  const[activeTerminal, setActiveTerminal]=useState("")
   return (
     <MonitorStyle className="monitor">
       <div className="content">
@@ -15,8 +16,8 @@ export default function Monitor(props) {
         <ActionRoller /> */}
         <Router>
           <Routes>
-            <Route exact path="/" element={<TerminalsList/>}/>
-            <Route path="home" element={<TerminalsList />}/>
+            <Route exact path="/" element={<TerminalsList activeTerminal={activeTerminal} setActiveTerminal={setActiveTerminal}/>}/>
+            <Route path="home" element={<TerminalsList activeTerminal={activeTerminal} setActiveTerminal={setActiveTerminal}/>}/>
             <Route path="*" element={<>Terminal: {`${window.location.pathname.substring(10)}`}, NOT READY</>}></Route>`
           </Routes>
         </Router>
