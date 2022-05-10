@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import terminalsList from "../DummyData/terminals";
 
 export default function Terminal(props) {
   const {activeTerminal, setActiveTerminal} = props;
@@ -10,32 +11,32 @@ export default function Terminal(props) {
     options: [{ option: "uno" }, { option: "dos" }],
   };
 
-  const [page, setPage] = useState(initialState);
-  useEffect(() => {
-    axios
-      .get(
-        `https://f2d20terminal.herokuapp.com/api/users/1/pages/${page.page_id}`
-      )
-      .then((resp) => {
-        setPage(resp.data);
-      })
-      .catch((err) => {
-        console.log();
-      });
-    //eslint-disable-next-line
-  }, []);
+  // const [page, setPage] = useState(initialState);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://f2d20terminal.herokuapp.com/api/users/1/pages/${page.page_id}`
+  //     )
+  //     .then((resp) => {
+  //       setPage(resp.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log();
+  //     });
+  //   //eslint-disable-next-line
+  // }, []);
 
-  const handleClick = (link) => {
-    console.log(link);
-    axios
-      .get(`https://f2d20terminal.herokuapp.com/api/users/1/pages/${link}`)
-      .then((resp) => {
-        setPage(resp.data);
-      })
-      .catch((err) => {
-        console.log();
-      });
-  };
+  // const handleClick = (link) => {
+  //   console.log(link);
+  //   axios
+  //     .get(`https://f2d20terminal.herokuapp.com/api/users/1/pages/${link}`)
+  //     .then((resp) => {
+  //       setPage(resp.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log();
+  //     });
+  // };
 
   return (
     <PageStyle className="page">
