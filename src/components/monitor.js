@@ -64,6 +64,7 @@ const MonitorStyle = Styled.div`
     margin: 0;
     div{
       display: flex;
+      align-items:flex-start;
       flex-direction column;
       width: 100%;
     }

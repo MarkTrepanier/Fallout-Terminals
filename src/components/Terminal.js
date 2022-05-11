@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+//import axios from "axios";
 import styled from "styled-components";
-import dummyTerminals from "../DummyData/dummyTerminals";
+//import dummyTerminals from "../DummyData/dummyTerminals";
 
 export default function Terminal(props) {
-  const {activeTerminal, setActiveTerminal} = props;
+  const {activeTerminal, } = props;
   const initialState = {
     prompt: "loading",
   };
@@ -23,7 +23,7 @@ export default function Terminal(props) {
   //     });
   //   //eslint-disable-next-line
   // }, []);
-  useEffect(()=>setPage(activeTerminal.page_0),[])
+  useEffect(()=>{setPage(activeTerminal.page_0)},[]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // const handleClick = (link) => {
   //   console.log(link);
@@ -47,7 +47,7 @@ export default function Terminal(props) {
       ) : (
         <></>
       )}
-      {page ? <h2 className="page-text">{`${page.prompt}`}</h2> : <></>}
+      {page ? <h3 className="page-text">{`${page.prompt}`}</h3> : <></>}
       {page.userOptions?.map((option, index) => {
           return (
             <h3
@@ -64,6 +64,6 @@ export default function Terminal(props) {
 const PageStyle = styled.div`
   display: flex;
   flex-direction: column;
-  h2{
+  h3{
   }
 `;
