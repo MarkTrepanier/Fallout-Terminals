@@ -72,7 +72,6 @@ const MonitorStyle = Styled.div`
       div{
         width: 90%;
         align-self:center;
-        text-align: center;
       }
     }
 
