@@ -82,4 +82,10 @@ const PageStyle = styled.div`
   h2{
     text-align:center;
   }
+  @media(max-width:800px){
+    font-size: 0.65rem;
+    h2{
+       font-size:0.7rem;
+    }
+ }
 `;

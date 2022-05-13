@@ -17,10 +17,13 @@ export default function TerminalsList(props) {
 const TerminalNameStyle = Styled.div`
    display: inline-block;
    width: 0px;
-   margin-top: 5%;
-   font-size:2rem;
+   margin-top: 2%;
+   font-size:5rem;
    @media(max-width:800px){
       font-size: 1rem;
+      h2{
+         font-size:1rem;
+      }
    }
 `
 
