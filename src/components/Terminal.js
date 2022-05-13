@@ -51,7 +51,17 @@ export default function Terminal(props) {
       ) : (
         <></>
       )}
-      {page ? <h3 className="page-text">{`${page.prompt}`}</h3> : <></>}
+      {page ? 
+      <div>
+        <h3 className="page-text">{`${page.prompt}`}</h3>
+        <ul>
+        {page.ulist?.map(item=><li>{item}</li>)}
+        </ul>
+        <ol>
+        {page.olist?.map(item=><li>item</li>)}
+        </ol>
+      </div>
+      : <></>}
       {page.userOptions?.map((option, index) => {
           return (
             <h3

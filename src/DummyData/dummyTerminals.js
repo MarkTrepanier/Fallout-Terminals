@@ -16,7 +16,8 @@ let dummyTerminals = {
             userOptions:[{text:"[back]",route:"page_1"}]
         },        
         page_3: {
-            prompt:"    Overview: Move product by loading and unloading \ntrailersResponsibilities:\n•    Stripping down bottle trailers for production•    Stripping down Polar trailers so they can be loaded\n•    Deliver bottles to production line\n•    Stacking cases on pallets\n•    Notify supervisor of wet or damaged cases\n•    Product rotation\n•    Check case codes and shrink wrap\n•    Promote cleanliness in areas\n\nMinimum Requirements:\n•    Forklift Operator training and certification\n•    Ability to lift 50 lbs. or more",
+            prompt:`Overview: Move product by loading and unloading trailers Responsibilities:`,
+            ulist:["Stripping down bottle trailers for production","Stripping down Polar trailers so they can be loaded","Deliver bottles to production line","Stacking cases on pallets","Notify supervisor of wet or damaged cases","Product rotation","Check case codes and shrink wrap","Promote cleanliness in areas"],
             userOptions:[{text:"[back]",route:"page_1"}]
         },
         page_4: {
