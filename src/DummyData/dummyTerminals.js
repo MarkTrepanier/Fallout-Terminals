@@ -13,24 +13,24 @@
 }*/
 let dummyTerminals = {
     
-    "Mike<>":{
-        terminal_name: "2222022214:RobCo:VisRep2",
-        header:"Welcome to ROBCO Industries (TM) Termlink -Polar Offices- <user:Mike_Logowski>",
+    "PolarCaps>users>Mike_Lagowski":{
+        terminal_name: "PolarCaps>users>Mike_Lagowski",
+        header:"Welcome to ROBCO Industries (TM) Termlink -PolarCaps Offices- <user:Mike_Logowski>",
         page_0: {
             prompt:"Welcome Mike",
             userOptions:[{text:"[LOGS]",route:"page_1"},{text:"[MAIL]",route:"page_4"}]
         },
         page_1: {
             prompt:"-LOGS-",
-            userOptions:[{text:"Polar",route:"page_2"},{text:"Forklift Position",route:"page_3"},{text:"[back]",route:"page_0"},]
+            userOptions:[{text:"PolarCaps",route:"page_2"},{text:"Forklift Position",route:"page_3"},{text:"[back]",route:"page_0"},]
         },
         page_2: {
-            prompt:`Based in Worcester, Massachusetts, Polar Beverages has remained a beloved hometown favorite while growing into a national cult favorite. As consumer tastes have evolved so has Polar Beverages’ ability to innovate and meet the growing demand for sparkling refreshment. From their heritage recipes, such as Polar Orange Dry and Birch Beer, to the playful introduction of modern seasonal Polar Seltzers, the people of Polar Beverages continue to love what they do and work hard to uphold the values of its founder.`,
+            prompt:`Based in Worcester, Massachusetts, PolarCaps Beverages has remained a beloved hometown favorite while growing into a national cult favorite. As consumer tastes have evolved so has PolarCaps Beverages’ ability to innovate and meet the growing demand for sparkling refreshment. From their heritage recipes, such as PolarCaps Orange Dry and Birch Beer, to the playful introduction of modern seasonal PolarCaps Seltzers, the people of PolarCaps Beverages continue to love what they do and work hard to uphold the values of its founder.`,
             userOptions:[{text:"[back]",route:"page_1"}]
         },        
         page_3: {
             prompt:"Overview: Move product by loading and unloading \ntrailers",
-            ulist:{title:"Responsibilities:", list:["Stripping down bottle trailers for production","Stripping down Polar trailers so they can be loaded","Deliver bottles to production line","Stacking cases on pallets","Notify supervisor of wet or damaged cases","Product rotation","Check case codes and shrink wrap","Promote cleanliness in areas"]},
+            ulist:{title:"Responsibilities:", list:["Stripping down bottle trailers for production","Stripping down PolarCaps trailers so they can be loaded","Deliver bottles to production line","Stacking cases on pallets","Notify supervisor of wet or damaged cases","Product rotation","Check case codes and shrink wrap","Promote cleanliness in areas"]},
             ulist_2:{title:"Minimum Requirements:",list:["Forklift Operator training and certification","Ability to lift 50 lbs. or more","Forklift Operator training and certification","Ability to lift 50 lbs. or more"]},
             userOptions:[{text:"[back]",route:"page_1"}]
         },
