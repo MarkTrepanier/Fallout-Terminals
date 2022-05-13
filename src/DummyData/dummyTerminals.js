@@ -13,12 +13,12 @@
 }*/
 let dummyTerminals = {
     
-    "PolarCaps>users>Mike_Lagowski":{
-        terminal_name: "PolarCaps>users>Mike_Lagowski",
+    "PolarCaps/users/Mike_Lagowski":{
+        terminal_name: "PolarCaps/users/Mike_Lagowski",
         header:"Welcome to ROBCO Industries (TM) Termlink -PolarCaps Offices- <user:Mike_Logowski>",
         page_0: {
             prompt:"Welcome Mike",
-            userOptions:[{text:"[LOGS]",route:"page_1"},{text:"[MAIL]",route:"page_4"}]
+            userOptions:[{text:"[LOGS]",route:"page_1"},{text:"[MAIL]",route:"page_4"},{text:"[CONTROL SAFE]",route:"page_8"},]
         },
         page_1: {
             prompt:"-LOGS-",
@@ -49,6 +49,10 @@ let dummyTerminals = {
         page_7: {
             prompt:"Hey Mike. About last night. Can we talk?",
             userOptions:[{text:"[back]",route:"page_4"}]
+        },        
+        page_8: {
+            prompt:"-CONTROL SAFE-",
+            userOptions:[{text:"[Disengage Lock]",route:"page_0"}]
         },
 
     },
