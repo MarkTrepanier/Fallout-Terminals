@@ -11,35 +11,11 @@ export default function Terminal(props) {
   };
   const nav = useNavigate();
   const [page, setPage] = useState(initialState);
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       `https://f2d20terminal.herokuapp.com/api/users/1/pages/${page.page_id}`
-  //     )
-  //     .then((resp) => {
-  //       setPage(resp.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log();
-  //     });
-  //   //eslint-disable-next-line
-  // }, []);
+
   useEffect(()=>{
     if(!activeTerminal)
     nav("/")
     setPage(activeTerminal.page_0)},[]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  // const handleClick = (link) => {
-  //   console.log(link);
-  //   axios
-  //     .get(`https://f2d20terminal.herokuapp.com/api/users/1/pages/${link}`)
-  //     .then((resp) => {
-  //       setPage(resp.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log();
-  //     });
-  // };
   const handleClick = (route) => {
     setPage(activeTerminal[route])
   }
@@ -54,12 +30,37 @@ export default function Terminal(props) {
       {page ? 
       <div>
         <h3 className="page-text">{`${page.prompt}`}</h3>
-        <ul>
-        {page.ulist?.map(item=><li>{item}</li>)}
-        </ul>
-        <ol>
-        {page.olist?.map(item=><li>item</li>)}
-        </ol>
+        {page.ulist?
+        <div>
+          <h3>{page.ulist.title}</h3>
+          <ul>
+          {page.ulist.list?.map((item,index)=><li key={index}>{item}</li>)}
+          </ul>
+        </div>:<></>}
+        {page.olist?
+        <div>
+          <h3>{page.olist.title}</h3>
+          <ol>
+          {page.olist.list?.map((item,index)=><li key={index}>{item}</li>)}
+          </ol>
+        </div>
+        :<></>}
+        {page.prompt_2?<h3 className="page-text">{`${page.prompt}`}</h3>:<></>}
+        {page.ulist_2?
+        <div>
+          <h3>{page.ulist_2.title}</h3>
+          <ul>
+          {page.ulist_2.list?.map((item,index)=><li key={index}>{item}</li>)}
+          </ul>
+        </div>:<></>}
+        {page.olist_2?
+        <div>
+          <h3>{page.olist_2.title}</h3>
+          <ol>
+          {page.olist_2.list?.map((item,index)=><li key={index}>{item}</li>)}
+          </ol>
+        </div>
+        :<></>}
       </div>
       : <></>}
       {page.userOptions?.map((option, index) => {
