@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
+import {useNavigate} from 'react-router-dom'
 //import axios from "axios";
 import styled from "styled-components";
 //import dummyTerminals from "../DummyData/dummyTerminals";
 
 export default function Terminal(props) {
-  const {activeTerminal, } = props;
+  const {activeTerminal} = props;
   const initialState = {
     prompt: "loading",
   };
-
+  const nav = useNavigate();
   const [page, setPage] = useState(initialState);
   // useEffect(() => {
   //   axios
@@ -23,7 +24,10 @@ export default function Terminal(props) {
   //     });
   //   //eslint-disable-next-line
   // }, []);
-  useEffect(()=>{setPage(activeTerminal.page_0)},[]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{
+    if(!activeTerminal)
+    nav("/")
+    setPage(activeTerminal.page_0)},[]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // const handleClick = (link) => {
   //   console.log(link);

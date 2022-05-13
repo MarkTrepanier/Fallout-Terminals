@@ -28,7 +28,7 @@ let dummyTerminals = {
             userOptions:[{text:"[back]",route:"page_4"}]
         },
         page_6: {
-            prompt:"Look Duane, i'm sorry. IU have this handled. You are going to be fine. I'm going to hae a chat with HR",
+            prompt:"Look Duane, i'm sorry. I have this handled. You are going to be fine. I'm going to hae a chat with HR",
             userOptions:[{text:"[back]",route:"page_4"}]
         },
         page_7: {
