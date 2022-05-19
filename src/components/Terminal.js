@@ -78,6 +78,7 @@ export default function Terminal(props) {
 
 const PageStyle = styled.div`
   display: flex;
+  white-space: pre-wrap;
   flex-direction: column;
   h2{
     text-align:center;

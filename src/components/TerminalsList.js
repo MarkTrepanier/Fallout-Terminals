@@ -18,7 +18,7 @@ const TerminalNameStyle = Styled.div`
    display: inline-block;
    width: 0px;
    margin-top: 2%;
-   font-size:5rem;
+   font-size:1rem;
    @media(max-width:800px){
       font-size: 1rem;
       h2{

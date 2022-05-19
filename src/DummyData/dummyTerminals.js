@@ -17,7 +17,34 @@ let dummyTerminals = {
         terminal_name: "PolarCaps/users/Mike_Lagowski",
         header:"Welcome to ROBCO Industries (TM) Termlink -PolarCaps Offices- <user:Mike_Logowski>",
         page_0: {
-            prompt:"Welcome Mike",
+            prompt:`Bloomberg Coffee Chat Prep
+
+            1. Introduction to who you are: Behavioral Interview Prep
+            Job Description: https://careers.bloomberg.com/job/detail/95864
+            
+            Format it in this way to knock out of the park:
+            Where you are now + what your technical "specialty" is
+            
+            
+            
+            
+            Where you were before
+            
+            
+            
+            
+            Where you are going next (tie it back to this role!)
+            
+            
+            
+            
+            2. Project highlight: Breaking Down a Technical Project 
+            
+            3. Q&A on Bloomberg Culture
+            Prepare 2-3 questions to ask your interviewer
+            Review company careers page and explore mission, values, etc. 
+            Review LinkedIn page and explore about, activity, etc. 
+            Review Behavioral Interview Prep`,
             userOptions:[{text:"[LOGS]",route:"page_1"},{text:"[MAIL]",route:"page_4"},{text:"[CONTROL SAFE]",route:"page_8"},]
         },
         page_1: {
