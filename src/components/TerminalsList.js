@@ -19,6 +19,7 @@ const TerminalNameStyle = Styled.div`
    width: 0px;
    margin-top: 2%;
    font-size:1rem;
+   cursor: pointer;
    @media(max-width:800px){
       font-size: 1rem;
       h2{

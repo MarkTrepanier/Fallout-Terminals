@@ -65,7 +65,7 @@ export default function Terminal(props) {
       : <></>}
       {page.userOptions?.map((option, index) => {
           return (
-            <h3
+            <h3 className="option"
               key={index}
               onClick={() => handleClick(`${option.route}`)}
             >{`> ${option.text}`}
@@ -88,5 +88,8 @@ const PageStyle = styled.div`
     h2{
        font-size:0.7rem;
     }
+ }
+ .option{
+  cursor: pointer;
  }
 `;
