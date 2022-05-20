@@ -81,12 +81,16 @@ const PageStyle = styled.div`
  textarea{
    background-color:inherit;
    color:inherit;
-   border-top: solid2px;
+   border-top: solid 2px;
    border-left: none;
    border-right:none;
    border-radius: 5px;
    border-color:inherit;
  }
+ textarea:focus {
+  border: solid 2px;
+  outline: none !important;
+}
  button{
   background-color:inherit;
   color:inherit;
