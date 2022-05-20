@@ -56,7 +56,7 @@ export default function Terminal(props) {
           value={tA}
           onChange={handleChange}
         ></textarea>
-        <button type='submit'>hello</button>
+        <button type='submit'>{'[submit]'}</button>
         </form>
     </PageStyle>
   );
@@ -81,7 +81,15 @@ const PageStyle = styled.div`
  textarea{
    background-color:inherit;
    color:inherit;
-   border:3px
-   border-color: inherit;
+   border-top: solid2px;
+   border-left: none;
+   border-right:none;
+   border-radius: 5px;
+   border-color:inherit;
+ }
+ button{
+  background-color:inherit;
+  color:inherit;
+  border:none;
  }
 `;
