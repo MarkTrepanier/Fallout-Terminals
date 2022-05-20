@@ -30,37 +30,6 @@ export default function Terminal(props) {
       {page ? 
       <div>
         <h3 className="page-text">{`${page.prompt}`}</h3>
-        {page.ulist?
-        <div>
-          <h3>{page.ulist.title}</h3>
-          <ul>
-          {page.ulist.list?.map((item,index)=><li key={index}>{item}</li>)}
-          </ul>
-        </div>:<></>}
-        {page.olist?
-        <div>
-          <h3>{page.olist.title}</h3>
-          <ol>
-          {page.olist.list?.map((item,index)=><li key={index}>{item}</li>)}
-          </ol>
-        </div>
-        :<></>}
-        {page.prompt_2?<h3 className="page-text">{`${page.prompt}`}</h3>:<></>}
-        {page.ulist_2?
-        <div>
-          <h3>{page.ulist_2.title}</h3>
-          <ul>
-          {page.ulist_2.list?.map((item,index)=><li key={index}>{item}</li>)}
-          </ul>
-        </div>:<></>}
-        {page.olist_2?
-        <div>
-          <h3>{page.olist_2.title}</h3>
-          <ol>
-          {page.olist_2.list?.map((item,index)=><li key={index}>{item}</li>)}
-          </ol>
-        </div>
-        :<></>}
       </div>
       : <></>}
       {page.userOptions?.map((option, index) => {
