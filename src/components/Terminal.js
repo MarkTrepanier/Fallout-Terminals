@@ -48,16 +48,16 @@ export default function Terminal(props) {
             </h3>
           );
         })}
-        <form onSubmit={handleSubmit}>
-        <textarea
+        {false?<form onSubmit={handleSubmit}>
+        <input
           type="text"
           name="newContent"
           placeholder="testing changes"
           value={tA}
           onChange={handleChange}
-        ></textarea>
+        ></input>
         <button type='submit'>{'[submit]'}</button>
-        </form>
+        </form>:<></>}
     </PageStyle>
   );
 }
@@ -78,7 +78,7 @@ const PageStyle = styled.div`
  .option{
   cursor: pointer;
  }
- textarea{
+ input{
    background-color:inherit;
    color:inherit;
    border-top: solid 2px;
@@ -86,8 +86,13 @@ const PageStyle = styled.div`
    border-right:none;
    border-radius: 5px;
    border-color:inherit;
+   border-bottom:none;
+   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: inherit;
+   opacity: .5;
+}
  }
- textarea:focus {
+ input:focus {
   border: solid 2px;
   outline: none !important;
 }
