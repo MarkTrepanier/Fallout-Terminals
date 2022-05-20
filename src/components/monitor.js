@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import Styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//import ActionRoller from "./ActionRoller";
-//import Login from "./login";
+import useSound from "use-sound";
 import TerminalsList from "./TerminalsList";
 import Terminal from "./Terminal";
+import electricHum from '../assets/sounds/hum_electric_neon_light_01.wav'
 
 export default function Monitor(props) {
   const[activeTerminal, setActiveTerminal]=useState("")
