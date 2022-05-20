@@ -11,13 +11,20 @@ export default function Terminal(props) {
   };
   const nav = useNavigate();
   const [page, setPage] = useState(initialState);
-
+  const [tA, setTA] = useState('');
   useEffect(()=>{
     if(!activeTerminal)
     nav("/")
     setPage(activeTerminal.page_0)},[]) // eslint-disable-line react-hooks/exhaustive-deps
   const handleClick = (route) => {
     setPage(activeTerminal[route])
+  }
+  const handleChange = (e) => {
+    setTA(e.target.value );
+  };
+  const handleSubmit = (e)=> {
+    e.preventDefault();
+    setPage({...page, prompt:tA})
   }
 
   return (
@@ -41,6 +48,16 @@ export default function Terminal(props) {
             </h3>
           );
         })}
+        <form onSubmit={handleSubmit}>
+        <textarea
+          type="text"
+          name="newContent"
+          placeholder="testing changes"
+          value={tA}
+          onChange={handleChange}
+        ></textarea>
+        <button type='submit'>hello</button>
+        </form>
     </PageStyle>
   );
 }
@@ -60,5 +77,11 @@ const PageStyle = styled.div`
  }
  .option{
   cursor: pointer;
+ }
+ textarea{
+   background-color:inherit;
+   color:inherit;
+   border:3px
+   border-color: inherit;
  }
 `;
