@@ -48,6 +48,7 @@ export default function Terminal(props) {
             </h3>
           );
         })}
+        {/* INPUT FIELD */}
         {false?<form onSubmit={handleSubmit}>
         <input
           type="text"
