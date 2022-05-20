@@ -96,4 +96,7 @@ const PageStyle = styled.div`
   color:inherit;
   border:none;
  }
+ button:focus{
+  outline: none !important;
+ }
 `;
