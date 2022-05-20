@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
-//import axios from "axios";
 import styled from "styled-components";
-//import dummyTerminals from "../DummyData/dummyTerminals";
+import useSound from "use-sound"
+import clicks from '../assets/sounds/sci-fi_computer_running_code_01.wav'
 
 export default function Terminal(props) {
+  const [play]= useSound(clicks,{volume:.7})
   const {activeTerminal} = props;
   const initialState = {
     prompt: "loading",
@@ -43,7 +44,10 @@ export default function Terminal(props) {
           return (
             <h3 className="option"
               key={index}
-              onClick={() => handleClick(`${option.route}`)}
+              onClick={() =>{
+                play();
+                handleClick(`${option.route}`)
+              }}
             >{`> ${option.text}`}
             </h3>
           );
