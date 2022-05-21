@@ -12,7 +12,7 @@ function randomCLick(){
 }
 
 export default function Terminal(props) {
-  const [play]= useSound(randomCLick(),{volume:1})
+  const [play]= useSound(randomCLick(),{volume:1, interrupt:true})
   const {activeTerminal} = props;
   const initialState = {
     prompt: "loading",
