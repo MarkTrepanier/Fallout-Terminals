@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
 import styled from "styled-components";
 import useSound from "use-sound"
-import clicks from '../assets/sounds/sci-fi_computer_running_code_01.wav'
+import clicks from '../assets/sounds/typing_keystroke_single_hard_03.wav'
 
 export default function Terminal(props) {
   const [play]= useSound(clicks,{volume:.7})

@@ -2,8 +2,13 @@ import dummyTerminals from "../DummyData/dummyTerminals"
 import Styled from  "styled-components"
 import {useNavigate} from 'react-router-dom'
 import useSound from "use-sound"
-import clicks from '../assets/sounds/sci-fi_computer_running_code_01.wav'
-
+import clicks from '../assets/sounds/typing_keystroke_sequence_03.wav'
+//typing_keystroke_single_hard_03.wav
+//typing_keystroke_sequence_11.wav
+//typing_keystroke_sequence_12.wav
+//typing_keystroke_single_hard_03.wav
+//typing_keystroke_single_hard_04.wav
+//typing_keystroke_single_hard_07.wav
 const data = dummyTerminals
 export default function TerminalsList(props) {
    const [play]=useSound(clicks,{volume:.7})
