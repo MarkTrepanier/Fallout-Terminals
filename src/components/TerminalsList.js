@@ -11,7 +11,7 @@ import clicks from '../assets/sounds/typing_keystroke_sequence_03.wav'
 //typing_keystroke_single_hard_07.wav
 const data = dummyTerminals
 export default function TerminalsList(props) {
-   const [play]=useSound(clicks,{volume:.7})
+   const [play]=useSound(clicks,{volume:1})
    const {setActiveTerminal} = props
    let nav = useNavigate()
    return <div>

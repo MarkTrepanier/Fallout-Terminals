@@ -1,15 +1,14 @@
 import React, {useState, useEffect} from "react";
 import Styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import useSound from "use-sound";
+//import useSound from "use-sound";
 import TerminalsList from "./TerminalsList";
 import Terminal from "./Terminal";
-import electricHum from '../assets/sounds/hum_electric_neon_light_01.wav'
+//import electricHum from '../assets/sounds/hum_electric_neon_light_01.wav'
 
 export default function Monitor(props) {
   const[activeTerminal, setActiveTerminal]=useState("")
-  const[play] = useSound(electricHum,{volume:.7, playbackRate:.5})
-  useEffect(play,[])// eslint-disable-line react-hooks/exhaustive-deps
+  //const[play] = useSound(electricHum,{volume:1, playbackRate:1})
   return (
     <MonitorStyle className="monitor">
       <div className="content">
