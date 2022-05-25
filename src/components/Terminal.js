@@ -6,13 +6,9 @@ import click0 from '../assets/sounds/typing_keystroke_single_hard_03.wav'
 import click1 from '../assets/sounds/typing_keystroke_single_hard_04.wav'
 import click2 from '../assets/sounds/typing_keystroke_single_hard_07.wav'
 
-const clicks=[click0,click1,click2]
-function randomCLick(){
-  return clicks[Math.floor(Math.random() * 3)]
-}
-
 export default function Terminal(props) {
-  const [play]= useSound(randomCLick(),{volume:1, interrupt:true})
+  const clicks = [click0, click1, click2]
+  const [play]= useSound(returnClick(clicks),{volume:.7})
   const {activeTerminal} = props;
   const initialState = {
     prompt: "loading",
@@ -52,8 +48,7 @@ export default function Terminal(props) {
             <h3 className="option"
               key={index}
               onClick={() =>{
-                play();
-                console.log(Math.floor(Math.random() * 3))
+                play();//fsfsfsfsf
                 handleClick(`${option.route}`)
               }}
             >{`> ${option.text}`}
@@ -73,6 +68,10 @@ export default function Terminal(props) {
         </form>:<></>}
     </PageStyle>
   );
+}
+
+function returnClick(array){
+  return array[Math.floor(Math.random * array.length)]
 }
 
 const PageStyle = styled.div`
