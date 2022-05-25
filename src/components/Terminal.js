@@ -3,12 +3,11 @@ import {useNavigate} from 'react-router-dom'
 import styled from "styled-components";
 import useSound from "use-sound"
 import click0 from '../assets/sounds/typing_keystroke_single_hard_03.wav'
-import click1 from '../assets/sounds/typing_keystroke_single_hard_04.wav'
-import click2 from '../assets/sounds/typing_keystroke_single_hard_07.wav'
+// import click1 from '../assets/sounds/typing_keystroke_single_hard_04.wav'
+// import click2 from '../assets/sounds/typing_keystroke_single_hard_07.wav'
 
 export default function Terminal(props) {
-  const clicks = [click0, click1, click2]
-  const [play]= useSound(returnClick(clicks),{volume:.7})
+  const [play]= useSound(click0,{volume:.7})
   const {activeTerminal} = props;
   const initialState = {
     prompt: "loading",
@@ -68,10 +67,6 @@ export default function Terminal(props) {
         </form>:<></>}
     </PageStyle>
   );
-}
-
-function returnClick(array){
-  return array[Math.floor(Math.random * array.length)]
 }
 
 const PageStyle = styled.div`
