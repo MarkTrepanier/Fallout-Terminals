@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
 import styled from "styled-components";
 import useSound from "use-sound"
-import click0 from '../assets/sounds/typing_keystroke_single_hard_03.wav'
-// import click1 from '../assets/sounds/typing_keystroke_single_hard_04.wav'
-// import click2 from '../assets/sounds/typing_keystroke_single_hard_07.wav'
-
+import clicks from '../assets/sounds/typing_keystroke_sequence_11.wav'
+const spriteMap = {
+  sequence: [0, 527],
+  heavy0: [530, 272],
+  heavy1: [730, 478],
+};
 export default function Terminal(props) {
-  const [play]= useSound(click0,{volume:.7})
+  const [play]= useSound(clicks,{volume:.7, sprite:spriteMap})
   const {activeTerminal} = props;
   const initialState = {
     prompt: "loading",
@@ -15,6 +17,7 @@ export default function Terminal(props) {
   const nav = useNavigate();
   const [page, setPage] = useState(initialState);
   const [tA, setTA] = useState('');
+  const sounds=["sequence", "heavy0", "heavy1"]
   useEffect(()=>{
     if(!activeTerminal)
     nav("/")
@@ -47,7 +50,7 @@ export default function Terminal(props) {
             <h3 className="option"
               key={index}
               onClick={() =>{
-                play();//fsfsfsfsf
+                play({id:returnRandomSound(sounds)});
                 handleClick(`${option.route}`)
               }}
             >{`> ${option.text}`}
@@ -112,3 +115,7 @@ const PageStyle = styled.div`
   outline: none !important;
  }
 `;
+
+function returnRandomSound(array){
+  return array[Math.floor(Math.random() * array.length)]
+}
