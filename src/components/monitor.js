@@ -24,7 +24,7 @@ export default function Monitor() {
           </Routes>
         </Router>
       </div>
-      <footer>created by <a className="link" href="https://my-portfolio-xi-liart.vercel.app/" target="_blank" rel="noreferrer">Mark Trepanier Cajigas</a>. pip-boy CSS by Chris Smith: Copyright (c) 2022 by Chris Smith <a className="link" href="https://codepen.io/chris22smith/pen/YZPrjr)">(https://codepen.io/chris22smith/pen/YZPrjr)</a></footer>
+      <footer>created by <a className="link" href="https://my-portfolio-xi-liart.vercel.app/" target="_blank" rel="noreferrer">Mark Trepanier Cajigas</a>. pip-boy CSS by Chris Smith: Copyright (c) 2022 by Chris Smith <a className="link" href="https://codepen.io/chris22smith/pen/YZPrjr" target="_blank" rel="noreferrer">(https://codepen.io/chris22smith/pen/YZPrjr)</a></footer>
     </MonitorStyle>
   );
 }
