@@ -24,7 +24,7 @@ export default function Monitor() {
           </Routes>
         </Router>
       </div>
-      <footer></footer>
+      <footer>created by <a className="portfoliolink" href="https://my-portfolio-xi-liart.vercel.app/" target="_blank" rel="noreferrer">Mark Trepanier Cajigas</a></footer>
     </MonitorStyle>
   );
 }
@@ -133,5 +133,8 @@ const MonitorStyle = Styled.div`
     50% {
       opacity:0;
     }
+  }
+  .portfoliolink{
+    color:inherit;
   }
 `;
