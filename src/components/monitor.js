@@ -139,5 +139,6 @@ const MonitorStyle = Styled.div`
   }
   footer{
     font-size:.7rem;
+    margin-bottom:30px;
   }
 `;
