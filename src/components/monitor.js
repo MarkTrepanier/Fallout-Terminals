@@ -24,7 +24,7 @@ export default function Monitor() {
           </Routes>
         </Router>
       </div>
-      <footer>created by <a className="portfoliolink" href="https://my-portfolio-xi-liart.vercel.app/" target="_blank" rel="noreferrer">Mark Trepanier Cajigas</a></footer>
+      <footer>created by <a className="link" href="https://my-portfolio-xi-liart.vercel.app/" target="_blank" rel="noreferrer">Mark Trepanier Cajigas</a>. pip-boy CSS by Chris Smith: Copyright (c) 2022 by Chris Smith <a className="link" href="https://codepen.io/chris22smith/pen/YZPrjr)">(https://codepen.io/chris22smith/pen/YZPrjr)</a></footer>
     </MonitorStyle>
   );
 }
@@ -127,14 +127,17 @@ const MonitorStyle = Styled.div`
       box-shadow:0 -10vh 20vh #0c0;
       top:150vh;
     }
-}
+  }
       
   @keyframes blink {
     50% {
       opacity:0;
     }
   }
-  .portfoliolink{
+  .link{
     color:inherit;
+  }
+  footer{
+    font-size:.7rem;
   }
 `;
